@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/cliente.css" />
+    <link rel="stylesheet" href="../CSS/tablas.css" />
+
+    <title>Trattoria Treno - Clientw</title>
+</head>
+<body>
+
+    <h1 id="titc">¡Bienvenido querido Cliente!</h1>
+
+    <h2>Realiza un pedido</h2>
+    <div>
+        <form>
+            <label>
+            Digite el código del plato:
+            <input type="text" name="codigo" required="Obligatorio"/>
+            Digite la cantidad:
+            <input type="number" name="cantidad" min="1" value="1" required="Obligatorio"/><br/><br/>
+            <input type="submit" value="Confirmar"/>
+            <p id="precio">Precio final: </p>
+            </label>
+        </form>
+        
+    </div>
+<script>
+    const precio = document.querySelector('p');
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) =>{
+        event.preventDefault();
+        precio.textContent = `Precio final: $ ${+ (Math.random() * 100000).toFixed(2)}`;
+    });
+</script>
+
+    <div>
+        <h2>¡¡Reserve con nosotros!!</h2>
+        <form>
+            <label>
+                Digite su nombre
+                <input type="text" name="nombre" required="Obligatorio"/>
+                Digite la fecha
+                <input type="date" name="fecha" required="Obligatorio"/><br/><br/>
+                Digite el número de personas:
+                <input type="number" name="personas" min="1" max="10" value="1" required="Obligatorio"/><br/><br/>
+                Digite las edades de las personas:
+                <select name="edades" multiple required="Obligatirio" size="5" multiple="multiple">
+                    <option value="0-17">0-17 años</option>
+                    <option value="18-30">18-30 años</option>
+                    <option value="31-40">31-40 años</option>
+                    <option value="41-50">41-50 años</option>
+                    <option value="51+">51 años o más</option>
+                </select> <br/><br/>
+
+                Tipo de evento
+                <input type="text" name="evento" required="Obligatorio"/><br/><br/>
+                <input type="submit" value="Confirmar"/> <br/>
+            </label>
+
+        </form>
+    </div>
+
+
+    <input type="button" name="volver" value="Volver al inicio" onclick="location.href='index.html'"/>
+
+</body>
+</html>

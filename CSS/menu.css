@@ -1,0 +1,29 @@
+.menu h3{
+    background-color: lightblue;
+    color: var(--color-encabezados);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: rgb(153, 199, 215) 5px 8px;
+}
+.menu h1{
+    color: var(--color-encabezados);
+    text-align: center;
+    background-color: #4CAF50;
+    padding: 20px;
+}
+.menuImageContainer{
+    background-color: #F56A4E;  
+    border-radius: 15px;
+    padding: 20px; 
+    box-shadow: #da563c 5px 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.menuImageContainer img{
+    width: 250px;
+    height: 250px;
+}
