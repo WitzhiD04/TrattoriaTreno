@@ -120,3 +120,23 @@ footer{
 .main-index{
     background-color: #e3c7a9;
 }
+
+
+#volver{
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--segundo-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    transition: background 0.3s;
+}
+
+#volver:hover{
+    background-color: var(--texto-oscuro);
+}
