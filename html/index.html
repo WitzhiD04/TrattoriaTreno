@@ -2,36 +2,52 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="../CSS/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trattoria Treno</title>
 </head>
 <body>
     <header>
         <nav>
         <ul class="menu-list">
-            <li><a href="/html/menu.html">Ver nuestro menú</a></li>
-            <li><a href="/html/bestsellers.html">Platos BestSellers</a></li>
-            <li><a href="/html/admin.html">Iniciar sesión como admin</a></li>
-            <li><a href="/html/cliente.html">Iniciar sesión como cliente</a></li>
-            <li><a href="/html/cocina.html">Iniciar sesión como cocinero</a></li>
-            <li><a href="/html/mesero.html">Iniciar sesión como mesero</a></li>
+            <li><a href="menu.html">Nuestro menú</a></li>
+            <li><a href="bestsellers.html">Best Sellers</a></li>
+            <li><a href="admin.html">Iniciar sesión como admin</a></li>
+            <li><a href="cliente.html">Iniciar sesión como cliente</a></li>
+            <li><a href="cocina.html">Iniciar sesión como cocinero</a></li>
+            <li><a href="mesero.html">Iniciar sesión como mesero</a></li>
         </ul>
         </nav>
     </header>
-    <h1>Bienvenidos a Trattoria Treno</h1>
-    <p>La mejor experiencia italiana de la ciudad!!</p>
-    <img src="/images/logo.png" width="500"/>
+    <main class="main-index">
+        <section class="banner">
+            <img src="/images/logo.png" alt="Logo Trattoria Treno" class="banner-logo"/>
+            <h1>Bienvenidos a Trattoria Treno</h1>
+            <p>La mejor experiencia italiana de la ciudad!!</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Trattoria Treno. Todos los derechos reservados.</p>
-        <p>Contacto:</p>
-        <img src="/images/ig.png" width="20"/>
-        <p>Instagram: @TrattoriaTreno</p>
-        <img src="/images/yt.jpg" width="20"/>
-        <p>YouTube: Trattoria Restaurante</p>
-        <iframe width="425" ="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.06848311424257%2C4.625468824241011%2C-74.06163811683656%2C4.631756805772411&amp;layer=mapnik&marker=4.628613%2C-74.065061" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=17/4.628613/-74.065061">View Larger Map</a></small>
+        <div class="footer">
+            <div class="footer-info">
+                <p>&copy; 2026 Trattoria Treno. Todos los derechos reservados.</p>
+                <div class="social">
+                    <div>
+                        <img src="/images/ig.png" alt="logo de instagram"/>
+                        <span>@TrattoriaTreno</span>
+                    </div>
+                    <div>
+                        <img src="/images/yt.jpg" alt="logo de youtube"/>
+                        <p>Trattoria Restaurante</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="map">
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-74.06848311424257%2C4.625468824241011%2C-74.06163811683656%2C4.631756805772411&amp;layer=mapnik&marker=4.628613%2C-74.065061" loading="lazy">
+
+                </iframe>
+            </div>
     </footer>
 </body>
-
-
 </html>

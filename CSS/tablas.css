@@ -48,3 +48,40 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #cf6c6c;
 }
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+thead {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+}
+
+thead th {
+    padding: 12px 15px;
+}
+
+/* Filas */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Filas pares */
+tbody tr:nth-child(even) {
+    background-color: #F56A4E;
+}
+
+tbody td {
+    padding: 12px 15px;
+}

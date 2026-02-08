@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trattoria Treno - Administrador</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/admin.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="menu.html">Nuestro menú</a></li>
+                <li><a href="bestsellers.html">Best Sellers</a></li>
+                <li><a href="admin.html">Iniciar sesión como admin</a></li>
+                <li><a href="cliente.html">Iniciar sesión como cliente</a></li>
+                <li><a href="cocina.html">Iniciar sesión como cocinero</a></li>
+                <li><a href="mesero.html">Iniciar sesión como mesero</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-admin">
+        <h1>Panel de Administración</h1>
+        <section class="tarjetas-admin">
+            <div class="tarjeta-admin">
+                <h3>Pedidos hoy</h3>
+                <p class="num-admin">24</p>
+            </div>
+
+            <div class="tarjeta-admin">
+                <h3>Reservas</h3>
+                <p class="num-admin">8</p>
+            </div>
+
+            <div class="tarjeta-admin">
+                <h3>Ingresos estimados</h3>
+                <p class="num-admin">$1.250.000</p>
+            </div>
+
+            <div class="tarjeta-admin">
+                <h3>Platos activos</h3>
+                <p class="num-admin">18</p>
+            </div>
+        </section>
+
+        <section class="seccion-admin">
+            <h2>Gestión del menú</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Plato</th>
+                    <th>Precio</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>F01</td>
+                    <td>Lasagna bolognesa</td>
+                    <td>$38.000</td>
+                    <td>Activo</td>
+                    <td>
+                        <button>Editar</button>
+                        <button class="desactivar">Desactivar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>P01</td>
+                    <td>Tiramisú</td>
+                    <td>$16.000</td>
+                    <td>Activo</td>
+                    <td>
+                        <button>Editar</button>
+                        <button class="desactivar">Desactivar</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="seccion-admin">
+            <h2>Pedidos recientes</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Cliente</th>
+                    <th>Plato</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Ana Gómez</td>
+                    <td>Pizza Margherita</td>
+                    <td>2</td>
+                    <td>En preparación</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Carlos Ruiz</td>
+                    <td>Spaghetti Carbonara</td>
+                    <td>1</td>
+                    <td>Servido</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="seccion-admin">
+            <h2>Reservas</h2>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Personas</th>
+                    <th>Evento</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Laura Martínez</td>
+                    <td>2026-03-12</td>
+                    <td>4</td>
+                    <td>Cumpleaños</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

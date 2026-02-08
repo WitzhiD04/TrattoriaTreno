@@ -1,8 +1,128 @@
-h2{
-    margin: auto;
+body{
+    background-color: #e3c7a9;
 }
 
-#titc {
+main{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+#titc{
     text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.tarjeta{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: rgba(0,0,0,0.1) 0 5px 15px;
+    margin-bottom: 40px;
+}
+
+.tarjeta h2{
+    background-color: lightblue;
     color: var(--color-encabezados);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: rgb(153, 199, 215) 5px 8px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+.grupo-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.grupo-form label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grupo-form input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.grupo-form select{
+    appearance: none;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 40px 10px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.grupo-form select:hover{
+    border-color: #4CAF50;
+}
+
+.grupo-form select:focus{
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.25);
+}
+
+.grupo-form select option{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+.grupo-form select option:checked{
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.grupo-form select option:nth-child(even) {
+    background-color: var(--segundo-color);
+}
+.grupo-form select option:nth-child(odd) {
+    background-color: var(--color-encabezados);
+}
+#precio{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #29b846;
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    background-color: #cf6c6c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    #titc {
+        font-size: 1.6rem;
+    }
+
+    button {
+        width: 100%;
+    }
 }
