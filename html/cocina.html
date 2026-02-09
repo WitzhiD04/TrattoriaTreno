@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trattoria Treno - Mesero</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/cocina.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="index.html">Inicio</a> </li>
+                <li><a href="menu.html">Nuestro menú</a></li>
+                <li><a href="bestsellers.html">Best Sellers</a></li>
+                <li><a href="admin.html">Administrador</a></li>
+                <li><a href="cliente.html">Cliente</a></li>
+                <li><a href="cocina.html">Cocinero</a></li>
+                <li><a href="mesero.html">Mesero</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="titm">Panel del Cocinero</h1>
+        <section class="tarjeta">
+            <h2>Pedidos en línea</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Mesa</th>
+                    <th>Pedido</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-label="Mesa">5</td>
+                    <td data-label="Pedido">Lasaña</td>
+                    <td data-label="Cantidad">2</td>
+                    <td data-label="Estado" class="pendiente">Listo</td>
+                </tr>
+                <tr>
+                    <td data-label="Mesa">2</td>
+                    <td data-label="Pedido">Pizza Margarita</td>
+                    <td data-label="Cantidad">1</td>
+                    <td data-label="Estado" class="pendiente">En cocina</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="tarjeta">
+            <h2>Cambiar Estado de orden</h2>
+            <form class="form">
+                <div class="grupo-form">
+                    <label>Mesa</label>
+                    <input type="number" min="1" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label>Estado de orden</label>
+                    <input type="text" required>
+                </div>
+
+                <button class="btn-pedir" type="submit">Actualizar estado</button>
+            </form>
+        </section>
+        <section class="tarjeta">
+            <h2>Ingredientes disponibles</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Cantidad</th>
+                    <th>Chef Encargado</th>
+                    <th>Pedir más</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Tomate</td>
+                    <td>10</td>
+                    <td>Gerónimo Benavides</td>
+                    <td>
+                        <button class="btn-pedir">Pedir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mozzarella</td>
+                    <td>5</td>
+                    <td>David Quint</td>
+                    <td>
+                        <button class="btn-pedir">Pedir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>20</td>
+                    <td>Lautaro del Campo</td>
+                    <td>
+                        <button disabled>Stock Max</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <input id="volver" type="button" name="volver" value="Volver al inicio" onclick="location.href='index.html'"/>
+</body>
+</html>
