@@ -1,5 +1,11 @@
+/*
+    Trattoria Treno - cliente.css
+    Propósito: estilos para la interfaz de cliente (formularios de pedido y reserva, tarjetas y botones).
+    Accesibilidad: mantiene tamaños y espaciado para facilitar lectura y uso en móviles.
+*/
+
 body{
-    background-color: #e3c7a9;
+        background-color: #e3c7a9;
 }
 
 main{

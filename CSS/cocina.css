@@ -1,5 +1,11 @@
+/*
+    Trattoria Treno - cocina.css
+    Propósito: estilos para el panel de cocina (tablas de pedidos, formularios de estado e inventario).
+    Notas: las reglas incluyen adaptaciones responsive para garantizar legibilidad en móviles.
+*/
+
 body {
-    background-color: #e3c7a9;
+        background-color: #e3c7a9;
 }
 
 main {

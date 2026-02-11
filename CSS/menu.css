@@ -1,5 +1,11 @@
+/*
+    Trattoria Treno - menu.css
+    Propósito: estilos específicos para la página de menú (contenedor, encabezados y galería de imágenes de platos).
+    Consejos: las imágenes están contenidas en `.menuImageContainer` y usan `object-fit: cover` para consistencia.
+*/
+
 body{
-    background-color: #e3c7a9;
+        background-color: #e3c7a9;
 }
 
 .menu {

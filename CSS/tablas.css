@@ -1,12 +1,20 @@
+/*
+    Trattoria Treno - tablas.css
+    Propósito: estilos para formularios y tablas usados en distintas páginas (alineamiento, botones y inputs).
+    Contenido:
+    - Estilos base para `form`, `label`, `input`, `table`, `thead` y `tbody`.
+    - Usar este archivo para estilos reutilizables de tablas y formularios.
+*/
+
 form {
-    width: 320px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    text-align: center;
-    margin: 40px auto;
+        width: 320px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        text-align: center;
+        margin: 40px auto;
 }
 
 label {

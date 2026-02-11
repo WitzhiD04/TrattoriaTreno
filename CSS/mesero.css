@@ -1,5 +1,11 @@
+/*
+    Trattoria Treno - mesero.css
+    Propósito: estilos para la interfaz del mesero (listado de pedidos, acciones y formularios).
+    Recomendación: usar botones deshabilitados para ilustrar estados no disponibles.
+*/
+
 body {
-    background-color: #e3c7a9;
+        background-color: #e3c7a9;
 }
 
 main {
