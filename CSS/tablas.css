@@ -7,14 +7,14 @@
 */
 
 form {
-        width: 320px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        text-align: center;
-        margin: 40px auto;
+    width: 320px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 40px auto;
 }
 
 label {

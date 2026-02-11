@@ -1,11 +1,10 @@
 /*
     Trattoria Treno - admin.css
     Propósito: estilos para el panel de administración (tarjetas, tablas y botones de gestión).
-    Notas: este archivo contiene estilos específicos de la sección administrativa; evitar lógica aquí.
 */
 
 body{
-        background-color: #e3c7a9;
+    background-color: #e3c7a9;
 }
 
 .contenedor-admin{

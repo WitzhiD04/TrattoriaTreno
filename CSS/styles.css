@@ -1,10 +1,6 @@
 /*
     Trattoria Treno - styles.css
     Propósito: estilos globales compartidos entre páginas (navegación, footer, tipografías y variables).
-    Notas:
-    - Mantener estilos aquí para consistencia visual.
-    - Usar variables CSS definidas en `:root` para colores reutilizables.
-    - Este archivo no debe contener comportamiento; sólo estilos.
 */
 
 /* Estilo general de la tabla */
