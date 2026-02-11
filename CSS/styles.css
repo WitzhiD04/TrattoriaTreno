@@ -140,3 +140,23 @@ footer{
 #volver:hover{
     background-color: var(--texto-oscuro);
 }
+
+/* Clase para enlaces tipo botón (mantiene el mismo estilo de #volver) */
+.btn{
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--segundo-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    transition: background 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--texto-oscuro);
+}
