@@ -61,23 +61,23 @@
             <h2>¡¡Reserve con nosotros!!</h2>
             <form>
                 <div class="grupo-form">
-                    <label>Nombre</label>
-                    <input type="text" name="nombre" required>
+                    <label for="res-nombre">Nombre</label>
+                    <input type="text" id="res-nombre" name="nombre" required>
                 </div>
 
                 <div class="grupo-form">
-                    <label>Fecha</label>
-                    <input type="date" name="fecha" required>
+                    <label for="res-fecha">Fecha</label>
+                    <input type="date" id="res-fecha" name="fecha" required>
                 </div>
 
                 <div class="grupo-form">
-                    <label>Número de personas</label>
-                    <input type="number" name="personas" min="1" max="10" value="1" required>
+                    <label for="res-personas">Número de personas</label>
+                    <input type="number" id="res-personas" name="personas" min="1" max="10" value="1" required>
                 </div>
 
                 <div class="grupo-form">
-                    <label>Edades</label>
-                    <select name="edades" multiple size="5" required>
+                    <label for="res-edades">Edades</label>
+                    <select id="res-edades" name="edades" multiple size="5" required>
                         <option>0-17 años</option>
                         <option>18-30 años</option>
                         <option>31-40 años</option>
@@ -87,8 +87,8 @@
                 </div>
 
                 <div class="grupo-form">
-                    <label>Tipo de evento</label>
-                    <input type="text" name="evento" required>
+                    <label for="res-evento">Tipo de evento</label>
+                    <input type="text" id="res-evento" name="evento" required>
                 </div>
 
                 <button type="submit" class="boton">Confirmar reserva</button>
