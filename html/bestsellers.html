@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/menu.css" />
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/tablas.css" />
     <link rel="stylesheet" href="../CSS/best-sellers.css" />
-    <link rel="stylesheet" href="../CSS/menu.css" />
+    
     <title>Trattoria Treno - ¡¡ Nuestos Best Sellers !!</title>
 </head>
 <body>
@@ -23,71 +24,80 @@
             </ul>
         </nav>
     </header>
-    <div class="menu">
+    <main class="menu">
         <header class="headerBestSellers">
             <h2>Nuestros Best Sellers</h2>
         </header>
-        <div class="entradas">
-            <h3>Entrada</h3>
+        <section class="seccion-menu">
+            <h3>Entradas</h3>
             <div class="menuImageContainer">
-                <img src="/images/Bruschetta.jpg" alt="Bruschetta" />
+                <img src="/images/Bruschetta.jpg" alt="Bruschetta clásica" >
+                <img src="/images/arancini.jpg" alt="Arancini" >
             </div>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Plato</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Alérgenos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>E01</td>
-                        <td>Bruschetta clásica</td>
-                        <td>Pan tostado con tomate, ajo y albahaca</td>
-                        <td>$18.000</td>
-                        <td>Gluten</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Plato</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Alérgenos</th>
+                            <th>Unidades Vendidas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>E01</td>
+                            <td>Bruschetta clásica</td>
+                            <td>Pan tostado con tomate, ajo y albahaca</td>
+                            <td>$18.000</td>
+                            <td>Gluten</td>
+                            <td>120</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-        <div class="fuertes">
+        <section class="seccion-menu">
             <h3>Plato fuerte</h3>
             <div class="menuImageContainer">
                 <img src="/images/carb.jpg" alt="Carbonara" />
             </div>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Plato</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Alérgenos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>F02</td>
-                        <td>Spaghetti carbonara</td>
-                        <td>Pasta con huevo, queso y panceta</td>
-                        <td>$36.000</td>
-                        <td>Gluten, Huevo, Lácteos</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Plato</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Alérgenos</th>
+                            <th>Unidades Vendidas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>F02</td>
+                            <td>Spaghetti carbonara</td>
+                            <td>Pasta con huevo, queso y panceta</td>
+                            <td>$36.000</td>
+                            <td>Gluten, Huevo, Lácteos</td>
+                            <td>108</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-        <div class="postres">
+        <section class="seccion-menu">
             <h3>Postre</h3>
             <div class="menuImageContainer">
                 <img src="/images/cannoli.jpg" alt="Cannoli" />
             </div>
-            <table border="1">
+            <div class="table-wrapper">
+            <table>
                 <thead>
                     <tr>
                         <th>Código</th>
@@ -95,6 +105,7 @@
                         <th>Descripción</th>
                         <th>Precio</th>
                         <th>Alérgenos</th>
+                        <th>Unidades Vendidas</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,17 +115,20 @@
                         <td>Masa crujiente rellena de ricotta</td>
                         <td>$15.000</td>
                         <td>Gluten, Lácteos</td>
+                        <td>77</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
+            </div>
+        </section>
 
-        <div class="bebidas">
+        <section class="seccion-menu">
             <h3>Bebida</h3>
             <div class="menuImageContainer">
                 <img src="/images/vinotinto.jpg" alt="Vino tinto">
             </div>
-            <table border="1">
+            <div class="table-wrapper">
+            <table>
                 <thead>
                     <tr>
                         <th>Código</th>
@@ -122,6 +136,7 @@
                         <th>Descripción</th>
                         <th>Precio</th>
                         <th>Observaciones</th>
+                        <th>Unidades Vendidas</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -131,10 +146,12 @@
                         <td>Vino seleccionado por copa</td>
                         <td>$15.000</td>
                         <td>Copa</td>
+                        <td>159</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
+            </div>
+        </section>
 
 
     </div>

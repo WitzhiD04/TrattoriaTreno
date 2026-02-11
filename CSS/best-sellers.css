@@ -6,3 +6,7 @@
     padding: 20px;
     text-align: center;
 }
+
+.table-wrapper{
+    overflow-x: auto;
+}
