@@ -112,14 +112,29 @@ footer{
     border-radius: 8px;
 }
 
+/*
+    Media query: reglas dentro de `@media(max-width:768px)` se aplican cuando
+    la pantalla tiene como máximo 768px de ancho (teléfonos/tablets pequeñas).
+    Esto se usa para adaptar el diseño a pantallas pequeñas (responsive).
+*/
 @media(max-width:768px){
-    .menu-list{
-        flex-wrap: wrap;
-    }
-    .footer{
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+        /*
+            `flex-wrap: wrap` permite que los elementos flex (hijos de un contenedor
+            con `display:flex`) pasen a la siguiente línea cuando no caben en una fila.
+            Útil para que el menú no desborde en pantallas pequeñas.
+        */
+        .menu-list{
+                flex-wrap: wrap;
+        }
+        /*
+            `grid-template-columns: 1fr;` cambia la rejilla a una sola columna.
+            `1fr` significa una fracción del espacio disponible (toma todo el ancho).
+            Aquí se simplifica el footer para pantallas pequeñas.
+        */
+        .footer{
+                grid-template-columns: 1fr;
+                text-align: center;
+        }
 }
 
 .main-index{

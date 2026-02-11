@@ -23,8 +23,14 @@ body{
 }
 
 .tarjetas-admin{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        display: grid;
+        /*
+            `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))` crea
+            columnas responsivas: cada columna tendrá al menos 200px y ocupará
+            una fracción (`1fr`) del espacio restante. `auto-fit` ajusta el número
+            de columnas según el ancho disponible, útil para tarjetas responsivas.
+        */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-bottom: 50px;
 }

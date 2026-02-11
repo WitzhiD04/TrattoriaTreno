@@ -13,5 +13,9 @@
 }
 
 .table-wrapper{
-    overflow-x: auto;
+        /*
+            `overflow-x: auto` permite desplazar horizontalmente tablas anchas en
+            dispositivos pequeños; evita que la tabla rompa el layout.
+        */
+        overflow-x: auto;
 }

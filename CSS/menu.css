@@ -40,17 +40,32 @@ body{
     display: flex;
     gap: 15px;
     justify-content: center;
-    flex-wrap: wrap;
+        /*
+            `flex-wrap: wrap` indica que los elementos hijos pueden moverse a la
+            siguiente línea cuando no hay suficiente espacio horizontal. Esto evita
+            que las imágenes se salgan del contenedor en pantallas pequeñas.
+        */
+        flex-wrap: wrap;
 }
 .menuImageContainer img{
     width: 220px;
     height: 220px;
-    object-fit: cover;
+        /*
+            `object-fit: cover` hace que la imagen se recorte y rellene el área
+            definida (ancho/alto) manteniendo la proporción. Evita que la imagen
+            se deforme cuando sus dimensiones no coinciden exactamente con el contenedor.
+        */
+        object-fit: cover;
     border-radius: 12px;
 }
 
 .table-wrapper{
-    overflow-x: auto;
+        /*
+            `overflow-x: auto` añade una barra de desplazamiento horizontal cuando
+            el contenido (por ejemplo una tabla) es más ancho que su contenedor.
+            Es común en tablas para mantener la legibilidad en pantallas pequeñas.
+        */
+        overflow-x: auto;
 }
 
 @media(max-width: 768px){

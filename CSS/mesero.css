@@ -27,7 +27,11 @@ main {
     background-color: white;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: rgba(0,0,0,0.1) 0 5px 15px;
+        /*
+            `box-shadow` aporta separación visual. El valor `rgba(0,0,0,0.1) 0 5px 15px`
+            indica color semi-transparente y desplazamientos para crear la sombra.
+        */
+        box-shadow: rgba(0,0,0,0.1) 0 5px 15px;
     margin-bottom: 35px;
 }
 
@@ -94,6 +98,12 @@ button:disabled {
     border: 1px solid #ccc;
 }
 
+/*
+  Reglas para pantallas pequeñas: se usa `@media (max-width: 600px)` para
+  cambiar la presentación de tablas a un formato de tarjetas (display:block)
+  y así facilitar la lectura en móviles. También se usa `td::before` con
+  `content: attr(data-label)` para mostrar la etiqueta del campo en cada fila.
+*/
 @media (max-width: 600px) {
 
     #titm {
@@ -137,6 +147,11 @@ button:disabled {
         font-size: 14px;
     }
 
+    /*
+      `attr(data-label)` permite insertar texto desde el atributo HTML
+      `data-label` en CSS. Se usa para mostrar la etiqueta de cada celda
+      cuando la fila se muestra como tarjeta.
+    */
     td::before {
         content: attr(data-label);
         font-weight: bold;
