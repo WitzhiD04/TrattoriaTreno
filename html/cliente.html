@@ -33,7 +33,7 @@
 
         <section class="tarjeta">
         <h2>Realiza un pedido</h2>
-            <form id="form-pedido">
+            <form id="form-pedido" method="GET">
                 <div class="grupo-form">
                     <label for="codigo">Nombre</label>
                     <input type="text" id="codigo" name="codigo" required/>
@@ -104,8 +104,6 @@
         precio.textContent = `Precio final: $ ${+ (Math.random() * 100000).toFixed(2)}`;
     });
 </script>
-
-
 
 </body>
 <script type="module" src="../scripts/pedido.js"></script>
