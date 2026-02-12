@@ -74,6 +74,8 @@ main{
     font-size: 15px;
     cursor: pointer;
     transition: all 0.2s ease;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .grupo-form select:hover{
@@ -96,7 +98,8 @@ main{
     border-radius: 8px;
     margin-bottom: 5px;
 }
-.grupo-form select option:checked{
+
+grupo-form select option:checked{
     background-color: #4CAF50;
     color: white;
 }

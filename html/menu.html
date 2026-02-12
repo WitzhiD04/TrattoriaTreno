@@ -29,6 +29,21 @@
             </ul>
         </nav>
     </header>
+    <div class="search">
+        <input type="search" id="searchBar" placeholder="Busca tu plato">
+        <label for="byName">Búsqueda por nombre</label>
+        <input type="radio" id="byName" value="name" name="searchType" checked>
+        <label for="byCat">Búsqueda por nombre</label>
+        <input type="radio" id="byCat" value="category" name="searchType">
+        <select id="categorySelect" disabled>
+            <option value="Todo">Todo</option>
+            <option value="entradas">Entradas</option>
+            <option value="fuertes">Fuertes</option>
+            <option value="postres">Postres</option>
+            <option value="bebidas">Bebidas</option>
+        </select>
+
+    </div>
     <main class="menu">
         <h1>Nuestro menú</h1>
             <hr/>
@@ -39,7 +54,7 @@
                 <img src="/images/Bruschetta.jpg" alt="Bruschetta clásica" >
                 <img src="/images/arancini.jpg" alt="Arancini" >
             </div>
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="tbl-entradas">
                 <table>
                     <thead>
                         <tr>
@@ -51,41 +66,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>E01</td>
-                            <td>Bruschetta clásica</td>
-                            <td>Pan tostado con tomate, ajo y albahaca</td>
-                            <td>$18.000</td>
-                            <td>Gluten</td>
-                        </tr>
-                        <tr>
-                            <td>E02</td>
-                            <td>Caprese</td>
-                            <td>Tomate fresco, mozzarella y albahaca</td>
-                            <td>$22.000</td>
-                            <td>Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>E03</td>
-                            <td>Arancini de queso</td>
-                            <td>Bolas de arroz rellenas de queso</td>
-                            <td>$20.000</td>
-                            <td>Gluten, Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>E04</td>
-                            <td>Carpaccio de res</td>
-                            <td>Finas láminas de res con parmesano</td>
-                            <td>$28.000</td>
-                            <td>Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>E05</td>
-                            <td>Focaccia al romero</td>
-                            <td>Pan artesanal con romero y aceite de oliva</td>
-                            <td>$15.000</td>
-                            <td>Gluten</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -99,7 +79,7 @@
                 <img src="/images/lasagna.jpg" alt="Lasagna" >
                 <img src="/images/pizza.jpg" alt="Pizza" >
             </div>
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="tbl-fuertes">
                 <table>
                     <thead>
                         <tr>
@@ -111,41 +91,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>F01</td>
-                            <td>Lasagna bolognesa</td>
-                            <td>Capas de pasta con salsa de carne</td>
-                            <td>$38.000</td>
-                            <td>Gluten, Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>F02</td>
-                            <td>Spaghetti carbonara</td>
-                            <td>Pasta con huevo, queso y panceta</td>
-                            <td>$36.000</td>
-                            <td>Gluten, Huevo, Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>F03</td>
-                            <td>Pizza Margherita</td>
-                            <td>Salsa de tomate, mozzarella y albahaca</td>
-                            <td>$34.000</td>
-                            <td>Gluten, Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>F04</td>
-                            <td>Risotto de champiñones</td>
-                            <td>Arroz cremoso con hongos frescos</td>
-                            <td>$35.000</td>
-                            <td>Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>F05</td>
-                            <td>Pollo al marsala</td>
-                            <td>Pollo en salsa de vino marsala</td>
-                            <td>$42.000</td>
-                            <td>Lácteos</td>
-                        </tr>
+                    
                     </tbody>
                 </table>
             </div>
@@ -158,7 +104,7 @@
                 <img src="/images/panna.jpg" alt="Panna cotta" >
                 <img src="/images/cannoli.jpg" alt="Cannoli" >
             </div>
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="tbl-postres">
                 <table>
                     <thead>
                         <tr>
@@ -170,27 +116,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>P01</td>
-                            <td>Tiramisú</td>
-                            <td>Bizcocho con café y crema de mascarpone</td>
-                            <td>$16.000</td>
-                            <td>Gluten, Huevo, Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>P02</td>
-                            <td>Panna cotta</td>
-                            <td>Crema suave con salsa de frutos rojos</td>
-                            <td>$14.000</td>
-                            <td>Lácteos</td>
-                        </tr>
-                        <tr>
-                            <td>P03</td>
-                            <td>Cannoli siciliano</td>
-                            <td>Masa crujiente rellena de ricotta</td>
-                            <td>$15.000</td>
-                            <td>Gluten, Lácteos</td>
-                        </tr>
+                       
                     </tbody>
                 </table>
             </div>
@@ -203,7 +129,7 @@
                 <img src="/images/espresso.jpg" alt="Café espresso" >
                 <img src="/images/vinotinto.jpg" alt="Vino tinto de la casa" >
             </div>
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="tbl-bebidas">
                 <table>
                     <thead>
                         <tr>
@@ -215,41 +141,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>B01</td>
-                            <td>Agua mineral</td>
-                            <td>Agua natural o gasificada</td>
-                            <td>$6.000</td>
-                            <td>Sin gas / Con gas</td>
-                        </tr>
-                        <tr>
-                            <td>B02</td>
-                            <td>Refresco</td>
-                            <td>Bebida gaseosa fría</td>
-                            <td>$7.000</td>
-                            <td>Cola, Naranja, Limón</td>
-                        </tr>
-                        <tr>
-                            <td>B03</td>
-                            <td>Cerveza artesanal</td>
-                            <td>Cerveza local de fermentación natural</td>
-                            <td>$12.000</td>
-                            <td>Contiene gluten</td>
-                        </tr>
-                        <tr>
-                            <td>B04</td>
-                            <td>Vino tinto de la casa</td>
-                            <td>Vino seleccionado por copa</td>
-                            <td>$15.000</td>
-                            <td>Copa</td>
-                        </tr>
-                        <tr>
-                            <td>B05</td>
-                            <td>Café espresso</td>
-                            <td>Café italiano intenso</td>
-                            <td>$5.000</td>
-                            <td>n/a</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -258,4 +149,6 @@
 </main>
     <a href="index.html" class="btn">Volver al inicio</a>
 </body>
+
+<script type="module" src="../scripts/menu.js"></script>
 </html>
