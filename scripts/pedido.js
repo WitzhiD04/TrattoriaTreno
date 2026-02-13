@@ -3,13 +3,11 @@ import { menuItems } from "../scripts/menuItems.js";
  
 const listaPlatos = document.querySelector("#plato-select");
 const pedidoForm = document.querySelector("#form-pedido");
-const tablaPedidos = document.querySelector("#tabla-pedidos");
+//const tablaPedidos = document.querySelector("#tabla-pedidos tbody");
 
 const platos = menuItems;
 
 console.table(platos)
-
-
 
 
 function datosPedido(nombre, plato, cantidad) {
@@ -20,6 +18,9 @@ function datosPedido(nombre, plato, cantidad) {
 
 
 function listaPedidos() {
+    if (!listaPlatos) {
+        return;
+    }
     let fila = '';
     platos.entradas.forEach((ent) => {
          fila += `
@@ -33,8 +34,6 @@ function listaPedidos() {
             <option value="${ent.codigo}">
                 ${ent.plato} - $${ent.precio}
             </option>`;
-            
-        //listaPlatos.insertAdjacentHTML("beforeend", fila);
         console.log(fila);
         listaPlatos.innerHTML = fila;
     });
@@ -58,6 +57,9 @@ function listaPedidos() {
 let numeroPedido = 0;
 
 function formPedido () {
+    if (!pedidoForm) {
+        return;
+    }
     pedidoForm.addEventListener("submit", (e) => {
 
         e.preventDefault();
@@ -67,13 +69,14 @@ function formPedido () {
         let nomPlato;
 
         const nombre = pedidoForm.elements['codigo'].value; 
-        const plato = form.elements['plato-select'].value; 
-        const cantidad= form.elements['cantidad'].value;
+        const plato = pedidoForm.elements['plato-select'].value; 
+        const cantidad= pedidoForm.elements['cantidad'].value;
         let datos = new datosPedido(nombre, plato, cantidad);
         let precioTotal = 0;
-         platos.entradas.forEach((ent) => {
+        platos.entradas.forEach((ent) => {
         if (datos.plato === ent.codigo) {
             precioTotal = ent.precio * parseInt(datos.cantidad);
+            nomPlato = ent.plato;
         }
         });
         platos.fuertes.forEach((ent) => {
@@ -95,28 +98,20 @@ function formPedido () {
             }
         });
         console.log(`El precio total del pedido es: $${precioTotal}`);
-        mandarPedido(datos, precioTotal, nomPlato);
+        //console.log(nomPlato);
+
+        let pedidoJson = JSON.parse(localStorage.getItem("pedidos")) || [];
+        pedidoJson.push({  
+            numeroPedido: numeroPedido,
+            nombre: datos.nombre,
+            plato: nomPlato,
+            cantidad: datos.cantidad,
+            precioTotal: precioTotal,
+            estado: "En preparación" // ver si cambiar este a que varie como random o no se
+        });
+        localStorage.setItem("pedidos", JSON.stringify(pedidoJson));
         });
 }
-
-function mandarPedido(datos, precioTotal, nomPlato) {
-    console.log(datos);
-    console.log(precioTotal);
-    console.log(numeroPedido);
-    console.log(nomPlato);
-    const fila = `
-    <tr>
-        <td>${numeroPedido}</td>
-        <td>${datos.nombre}</td>
-        <td>${nomPlato}</td>
-        <td>${datos.cantidad}</td>
-        <td>$${precioTotal}</td>
-        <td>En preparación</td>
-    </tr>
-    `;
-    tablaPedidos.insertAdjacentHTML("beforeend", fila);
-}
-
 
 document.addEventListener("DOMContentLoaded", ()=>{
     listaPedidos(), formPedido();
