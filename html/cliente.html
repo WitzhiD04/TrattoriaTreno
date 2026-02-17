@@ -58,7 +58,7 @@
 
         <section class="tarjeta">
             <h2>¡¡Reserve con nosotros!!</h2>
-            <form>
+            <form id="form-reserva">
                 <div class="grupo-form">
                     <label for="res-nombre">Nombre</label>
                     <input type="text" id="res-nombre" name="nombre" required>
@@ -91,6 +91,7 @@
                 </div>
 
                 <button type="submit" class="boton">Confirmar reserva</button>
+                <p id="confirmacion-reserva"></p>
             </form>
         </section>
     </main>
@@ -98,7 +99,7 @@
     <a href="index.html" class="btn">Volver al inicio</a>
 <script>
     const precio = document.querySelector('p');
-    const form = document.querySelector('form');
+    const form = document.querySelector('#form-pedido');
     form.addEventListener('submit', (event) =>{
         event.preventDefault();
         precio.textContent = `Precio final: $ ${+ (Math.random() * 100000).toFixed(2)}`;
@@ -107,5 +108,6 @@
 
 </body>
 <script type="module" src="../scripts/pedido.js"></script>
+<script type="module" src="../scripts/reserva.js"></script>
 
 </html>

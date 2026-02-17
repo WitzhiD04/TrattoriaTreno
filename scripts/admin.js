@@ -21,6 +21,35 @@ function mandarPedido() {
     //localStorage.removeItem('pedidos');
 }
 
+/**
+ * Carga y muestra las reservas en la tabla de reservas
+ */
+function mandarReservas() {
+    const tablaReservas = document.querySelector("section.seccion-admin:nth-of-type(3) table tbody");
+    
+    if (!tablaReservas) {
+        return;
+    }
+
+    let reservasJson = JSON.parse(localStorage.getItem("reservas")) || [];
+
+    reservasJson.forEach(reserva => {
+        const fila = `
+    <tr>
+        <td>${reserva.numeroReserva}</td>
+        <td>${reserva.nombre}</td>
+        <td>${reserva.fecha}</td>
+        <td>${reserva.personas}</td>
+        <td>${reserva.mesa}</td>
+        <td>${reserva.evento}</td>
+        <td>${reserva.estado}</td>
+    </tr>
+    `;
+        tablaReservas.insertAdjacentHTML("beforeend", fila);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", ()=>{
     mandarPedido();
+    mandarReservas();
 });
