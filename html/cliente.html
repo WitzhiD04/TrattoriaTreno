@@ -97,14 +97,7 @@
     </main>
 
     <a href="index.html" class="btn">Volver al inicio</a>
-<script>
-    const precio = document.querySelector('p');
-    const form = document.querySelector('#form-pedido');
-    form.addEventListener('submit', (event) =>{
-        event.preventDefault();
-        precio.textContent = `Precio final: $ ${+ (Math.random() * 100000).toFixed(2)}`;
-    });
-</script>
+
 
 </body>
 <script type="module" src="../scripts/pedido.js"></script>

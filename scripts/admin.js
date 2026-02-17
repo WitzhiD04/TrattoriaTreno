@@ -25,7 +25,7 @@ function mandarPedido() {
  * Carga y muestra las reservas en la tabla de reservas
  */
 function mandarReservas() {
-    const tablaReservas = document.querySelector("section.seccion-admin:nth-of-type(3) table tbody");
+    const tablaReservas = document.querySelector("#tabla-reservas tbody");
     
     if (!tablaReservas) {
         return;
