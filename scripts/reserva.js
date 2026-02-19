@@ -72,7 +72,8 @@ function procesarReserva() {
         const fecha = reservaForm.elements['fecha'].value;
         const personas = parseInt(reservaForm.elements['personas'].value);
         const edades = obtenerEdadesSeleccionadas();
-        const evento = reservaForm.elements['evento'].value.trim();
+        const evento = reservaForm.elements['evento'].value;
+        console.log(`Datos ingresados: ${nombre}, ${fecha}, ${personas} personas, edades: ${edades.join(", ")}, evento: ${evento}`);
 
         // Validar que se hayan seleccionado edades
         if (edades.length === 0) {

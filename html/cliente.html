@@ -87,7 +87,14 @@
 
                 <div class="grupo-form">
                     <label for="res-evento">Tipo de evento</label>
-                    <input type="text" id="res-evento" name="evento" required>
+                    <!-- <input type="text" id="res-evento" name="evento" required> -->
+                    <select id="res-evento" name="evento" required>
+                        <option value="">Seleccione el tipo de evento</option>
+                        <option value="Cumpleaños">Cumpleaños</option>
+                        <option value="Evento de trabajo">Evento de trabajo</option>
+                        <option value="Evento Familiar">Evento familiar</option>
+                        <option value="otro">Otro</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="boton">Confirmar reserva</button>
