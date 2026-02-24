@@ -29,20 +29,33 @@
             </ul>
         </nav>
     </header>
-    <div class="search">
-        <input type="search" id="searchBar" placeholder="Busca tu plato">
-        <label for="byName">Búsqueda por nombre</label>
-        <input type="radio" id="byName" value="name" name="searchType" checked>
-        <label for="byCat">Búsqueda por nombre</label>
-        <input type="radio" id="byCat" value="category" name="searchType">
-        <select id="categorySelect" disabled>
-            <option value="Todo">Todo</option>
-            <option value="entradas">Entradas</option>
-            <option value="fuertes">Fuertes</option>
-            <option value="postres">Postres</option>
-            <option value="bebidas">Bebidas</option>
-        </select>
-
+    <div class="search" style="text-align: center; margin: 20px 0;">
+        <div class="search-container" style="display: inline-block; max-width: 600px; width: 100%;">
+            <div class="grupo-form">
+                <label for="searchBar">Buscar plato</label>
+                <input type="search" id="searchBar" placeholder="Busca tu plato" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div class="radio-group" style="display: flex; justify-content: center; gap: 20px; margin: 10px 0;">
+                <div class="radio-option" style="display: flex; align-items: center;">
+                    <input type="radio" id="byName" value="name" name="searchType" checked style="margin-right: 5px;">
+                    <label for="byName" style="cursor: pointer; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">Búsqueda por nombre</label>
+                </div>
+                <div class="radio-option" style="display: flex; align-items: center;">
+                    <input type="radio" id="byCat" value="category" name="searchType" style="margin-right: 5px;">
+                    <label for="byCat" style="cursor: pointer; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">Búsqueda por categoría</label>
+                </div>
+            </div>
+            <div class="grupo-form">
+                <label for="categorySelect">Categoría</label>
+                <select id="categorySelect" disabled style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="Todo">Todo</option>
+                    <option value="entradas">Entradas</option>
+                    <option value="fuertes">Fuertes</option>
+                    <option value="postres">Postres</option>
+                    <option value="bebidas">Bebidas</option>
+                </select>
+            </div>
+        </div>
     </div>
     <main class="menu">
         <h1>Nuestro menú</h1>

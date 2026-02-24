@@ -182,8 +182,23 @@ function nameSearch(query){
 
 
 
+function updateRadioStyles() {
+    const radios = document.querySelectorAll('input[name="searchType"]');
+    radios.forEach(radio => {
+        const label = document.querySelector(`label[for="${radio.id}"]`);
+        if (radio.checked) {
+            label.style.background = '#F56A4E';
+            label.style.color = 'white';
+        } else {
+            label.style.background = '#f9f9f9';
+            label.style.color = 'black';
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", ()=>{
     loadAll();
+    updateRadioStyles(); // Inicializar estilos
 })
 
 searchBar.addEventListener('input', (e)=>{
@@ -216,6 +231,7 @@ byName.addEventListener("change", e =>{
     searchBar.value = "";
     emptyTables();
     loadAll();
+    updateRadioStyles();
 })
 
 byCat.addEventListener("change", e =>{
@@ -224,4 +240,5 @@ byCat.addEventListener("change", e =>{
     categorySelect.value = "Todo";
     emptyTables();
     loadAll();
+    updateRadioStyles();
 })
