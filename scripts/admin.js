@@ -77,7 +77,7 @@ function mandarReservas() {
         <td>${reserva.fecha}</td>
         <td>${reserva.personas}</td>
         <td>${reserva.mesa}</td>
-        <td>${reserva.evento}</td>
+        <td>${reserva.edades.join(", ")}</td>
         <td>${reserva.estado}</td>
     </tr>
     `;

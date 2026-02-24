@@ -6,6 +6,8 @@
 
 const reservaForm = document.querySelector("#form-reserva");
 const confirmacionReserva = document.querySelector("#confirmacion-reserva");
+const numPersonasInput = document.querySelector("#res-personas");
+const edadesContainer = document.querySelector("#edades-container");
 
 /**
  * Constructor para objetos de reserva
@@ -15,7 +17,7 @@ function Reserva(nombre, fecha, personas, edades, evento) {
     this.nombre = nombre;
     this.fecha = fecha;
     this.personas = personas;
-    this.edades = edades;
+    this.edades = edades; // Ahora array de números
     this.evento = evento;
     this.estado = "Confirmada";
     this.fechaRegistro = new Date().toLocaleDateString('es-CO');
@@ -40,12 +42,47 @@ function validarFecha(fecha) {
 }
 
 /**
- * Obtiene los valores seleccionados del select múltiple
+ * Crea un elemento de edad (input numérico)
  */
-function obtenerEdadesSeleccionadas() {
-    const selectEdades = document.querySelector("#res-edades");
-    const opcionesSeleccionadas = Array.from(selectEdades.selectedOptions);
-    return opcionesSeleccionadas.map(option => option.textContent);
+function crearElementoEdad(index) {
+    const div = document.createElement('div');
+    div.className = 'grupo-form';
+    div.innerHTML = `
+        <label for="edad-${index}">Edad de la persona ${index + 1}</label>
+        <input type="number" id="edad-${index}" name="edad-${index}" min="1" max="100" required>
+    `;
+    return div;
+}
+
+/**
+ * Actualiza los campos de edad dinámicos basados en el número de personas
+ */
+function actualizarEdades() {
+    const numPersonas = parseInt(numPersonasInput.value) || 0;
+    edadesContainer.innerHTML = ''; // Limpiar
+    for (let i = 0; i < numPersonas; i++) {
+        const elementoEdad = crearElementoEdad(i);
+        edadesContainer.appendChild(elementoEdad);
+    }
+}
+
+/**
+ * Obtiene las edades de los inputs dinámicos
+ */
+function obtenerEdades() {
+    const numPersonas = parseInt(numPersonasInput.value) || 0;
+    const edades = [];
+    for (let i = 0; i < numPersonas; i++) {
+        const inputEdad = document.querySelector(`#edad-${i}`);
+        if (inputEdad) {
+            const edad = parseInt(inputEdad.value);
+            if (isNaN(edad) || edad < 1 || edad > 100) {
+                return null; // Invalid
+            }
+            edades.push(edad);
+        }
+    }
+    return edades;
 }
 
 /**
@@ -71,13 +108,12 @@ function procesarReserva() {
         const nombre = reservaForm.elements['nombre'].value.trim();
         const fecha = reservaForm.elements['fecha'].value;
         const personas = parseInt(reservaForm.elements['personas'].value);
-        const edades = obtenerEdadesSeleccionadas();
+        const edades = obtenerEdades();
         const evento = reservaForm.elements['evento'].value;
-        console.log(`Datos ingresados: ${nombre}, ${fecha}, ${personas} personas, edades: ${edades.join(", ")}, evento: ${evento}`);
 
-        // Validar que se hayan seleccionado edades
-        if (edades.length === 0) {
-            alert("⚠️ Por favor selecciona al menos una categoría de edad");
+        // Validar que se hayan ingresado edades válidas
+        if (!edades || edades.length !== personas) {
+            alert("⚠️ Por favor ingresa una edad válida (1-100) para cada persona");
             return;
         }
 
@@ -101,6 +137,7 @@ function procesarReserva() {
 
         // Limpiar formulario
         reservaForm.reset();
+        actualizarEdades(); // Resetear edades dinámicas
     });
 }
 
@@ -122,6 +159,7 @@ function mostrarConfirmacion(reserva) {
          Fecha: ${fechaFormato}\n
          Mesa: ${reserva.mesa}\n
          Personas: ${reserva.personas}\n
+         Edades: ${reserva.edades.join(", ")}\n
          Evento: ${reserva.evento}
     `;
 
@@ -143,5 +181,9 @@ function mostrarConfirmacion(reserva) {
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
+    actualizarEdades(); // Inicializar con 1 persona
     procesarReserva();
 });
+
+// Evento para actualizar edades al cambiar número de personas
+numPersonasInput.addEventListener('input', actualizarEdades);
